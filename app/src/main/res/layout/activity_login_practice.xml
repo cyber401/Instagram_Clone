@@ -19,16 +19,16 @@
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:ems="10"
-        android:hint="Phone number, email, username"
-        android:paddingLeft="15dp"
-        android:background="@drawable/input"
-        android:inputType="text"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:hint="Phone number, email, username"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:textColor="#FFFFFF"
         tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="270dp"
-        />
+        tools:layout_editor_absoluteY="270dp" />
 
     <EditText
         android:id="@+id/password"
