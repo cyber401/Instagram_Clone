@@ -17,7 +17,6 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/instagram"
         app:layout_constraintTop_toBottomOf="@+id/instagram" />
-
     <TextView
         android:id="@+id/instagram"
         android:layout_width="wrap_content"

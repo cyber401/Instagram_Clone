@@ -3,59 +3,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".LoginPractice"
     android:orientation="vertical"
     android:gravity="center"
-    >
+    android:paddingBottom="15dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/instagram"
+        android:layout_marginBottom="30dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:text="Instagram"
         android:textSize="50dp"
-        android:textColor="@color/instagram"/>
-
-    <EditText
-        android:id="@+id/username"
+        android:textColor="@color/black"/>
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="23dp"
+    android:layout_marginRight="23dp"
+    android:id="@+id/modified"
+    app:hintEnabled="false"
+    app:boxBackgroundColor="#F7F8F7"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+    <com.google.android.material.textfield.TextInputEditText
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/input"
-        android:ems="10"
-        android:hint="Phone number, email, username"
+        android:layout_height="wrap_content"
         android:inputType="text"
-        android:paddingLeft="15dp"
-        android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="270dp" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="55dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="password"
-        android:paddingLeft="13dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/input"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="87dp"
-        android:layout_marginTop="13dp"
+        android:hint="User name"
         />
-
-    <Button
-        android:id="@+id/button"
+</com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:id="@+id/password"
+        app:hintEnabled="false"
         android:layout_marginTop="13dp"
-        android:background="@drawable/button"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:hint="Log In"
-        android:textColorHint="@color/buttonColor"
-        />
+        app:boxBackgroundColor="#F7F8F7"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:background="@drawable/round_button"
+    android:backgroundTint="#47C4FA"
+    android:layout_marginLeft="23dp"
+    android:layout_marginRight="23dp"
+    android:layout_marginTop="13dp"
+    android:hint="Log In"
+    style="?android:attr/borderlessButtonStyle"
+    android:textColorHint="#B8F4F6"
+    />
 </LinearLayout>
