@@ -1,8 +1,11 @@
 package com.example.instagram_clone;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Pair;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -33,9 +36,12 @@ private static int SPLASH=2500;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this,LoginPractice.class);
-                startActivity(intent);
-                finish();
+                Intent intent = new Intent(MainActivity.this, SignUp.class);
+                Pair[] pair=new Pair[2];
+                pair[0]=new Pair<View,String>(insta_image,"image_transition");
+                pair[1]=new Pair<View,String>(instagram,"text_transition");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,pair);
+                startActivity(intent, options.toBundle());
             }
         }, SPLASH);
     }
