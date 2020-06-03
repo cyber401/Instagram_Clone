@@ -46,10 +46,14 @@ public class LogIn extends AppCompatActivity {
                             Toast.makeText(LogIn.this, "Login successfull", Toast.LENGTH_SHORT).show();
                             Intent i=new Intent(LogIn.this,ProfileScreen.class);
                             startActivity(i);
+                            finish();
                         }else{
                             Toast.makeText(LogIn.this, "Login fail", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
+
+
+
     }
 }

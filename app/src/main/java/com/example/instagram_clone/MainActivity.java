@@ -42,6 +42,7 @@ private static int SPLASH=2500;
                 pair[1]=new Pair<View,String>(instagram,"text_transition");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,pair);
                 startActivity(intent, options.toBundle());
+                finish();
             }
         }, SPLASH);
     }

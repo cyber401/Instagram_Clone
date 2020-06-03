@@ -50,6 +50,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                             Toast.makeText(SignUp.this, "SignUp complete", Toast.LENGTH_SHORT).show();
                             Intent i=new Intent(SignUp.this,LogIn.class);
                             startActivity(i);
+                            finish();
                         }else{
                             Toast.makeText(SignUp.this, "SignUp fail", Toast.LENGTH_SHORT).show();
                         }
@@ -66,8 +67,15 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             case R.id.button_alreadyhaveaccount:
                 Intent i=new Intent(SignUp.this,LogIn.class);
                 startActivity(i);
+                finish();
                 break;
 
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+         finish();
+          }
 }
