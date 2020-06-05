@@ -37,11 +37,7 @@ private static int SPLASH=2500;
             @Override
             public void run() {
                 Intent intent = new Intent(MainActivity.this, SignUp.class);
-                Pair[] pair=new Pair[2];
-                pair[0]=new Pair<View,String>(insta_image,"image_transition");
-                pair[1]=new Pair<View,String>(instagram,"text_transition");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,pair);
-                startActivity(intent, options.toBundle());
+                startActivity(intent);
                 finish();
             }
         }, SPLASH);

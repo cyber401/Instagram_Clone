@@ -14,7 +14,6 @@
         android:id="@+id/logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:transitionName="image_transition"
         android:src="@drawable/instagram"
         android:layout_marginBottom="30dp"/>
 
@@ -22,7 +21,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        android:transitionName="text_transition"
         android:text="Instagram"
         android:textSize="50dp"
         android:textColor="@color/black"/>
