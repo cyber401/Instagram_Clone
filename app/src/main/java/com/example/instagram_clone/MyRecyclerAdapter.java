@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.MyViewHolder> {
-  ArrayList<DataDistributor> data;
+  ArrayList<DataHandler> data;
 
-  public MyRecyclerAdapter(ArrayList<DataDistributor> data){
+  public MyRecyclerAdapter(ArrayList<DataHandler> data){
       this.data=data;
   }
 
@@ -27,7 +27,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-      DataDistributor dataDistributor = data.get(position);
+      DataHandler dataDistributor = data.get(position);
       holder.imageView.setImageResource(dataDistributor.getImageView());
       holder.textView.setText(dataDistributor.getNameOfUser());
     }

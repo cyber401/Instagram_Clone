@@ -1,10 +1,10 @@
 package com.example.instagram_clone;
 
-public class DataDistributor {
+public class DataHandler {
   int imageView;
   String nameOfUser;
 
-  public DataDistributor(int imageView, String nameOfUser){
+  public DataHandler(int imageView, String nameOfUser){
       this.imageView=imageView;
       this.nameOfUser=nameOfUser;
   }

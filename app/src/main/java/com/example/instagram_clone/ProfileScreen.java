@@ -11,21 +11,21 @@ import java.util.ArrayList;
 public class ProfileScreen extends AppCompatActivity {
 RecyclerView recyclerView;
 MyRecyclerAdapter adapter;
-ArrayList<DataDistributor> data;
+ArrayList<DataHandler> data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_screen);
         recyclerView=findViewById(R.id.recyclerView);
        data=new ArrayList<>();
-       data.add(new DataDistributor(R.drawable.one,"Lalit Kumar"));
-        data.add(new DataDistributor(R.drawable.two,"Virender Kumar"));
-        data.add(new DataDistributor(R.drawable.three,"Tara Devi"));
-        data.add(new DataDistributor(R.drawable.four,"Thakur Parshad"));
-        data.add(new DataDistributor(R.drawable.five,"Chaten"));
-        data.add(new DataDistributor(R.drawable.six,"Gautam Rai"));
-        data.add(new DataDistributor(R.drawable.seven,"Manish Kumar"));
-        data.add(new DataDistributor(R.drawable.eight,"Devesh Baniya"));
+       data.add(new DataHandler(R.drawable.one,"Lalit Kumar"));
+        data.add(new DataHandler(R.drawable.two,"Virender Kumar"));
+        data.add(new DataHandler(R.drawable.three,"Tara Devi"));
+        data.add(new DataHandler(R.drawable.four,"Thakur Parshad"));
+        data.add(new DataHandler(R.drawable.five,"Chaten"));
+        data.add(new DataHandler(R.drawable.six,"Gautam Rai"));
+        data.add(new DataHandler(R.drawable.seven,"Manish Kumar"));
+        data.add(new DataHandler(R.drawable.eight,"Devesh Baniya"));
         adapter = new MyRecyclerAdapter(data);
         LinearLayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setAdapter(adapter);
